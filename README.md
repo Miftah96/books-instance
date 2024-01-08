@@ -17,7 +17,9 @@ REST API untuk mengelola daftar buku dalam sebuah perpustakaan. API ini akan mem
 
 ## Resource
 - Postman collection > Book Instance.postman_collection.json
+- book_instance.sql 
 
 ## Running Application
 1. Import postman collection
-1. mvn spring-boot:run 
+2. If you want to have initial data, please run sql book_instance
+3. mvn spring-boot:run 
