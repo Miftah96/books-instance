@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "b24af23a-10c6-4374-b242-1354b54f0847",
+		"name": "Book Instance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7987637"
+	},
+	"item": [
+		{
+			"name": "New book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Semua manusia bersaudara\",\n    \"author\": \"Mahatma Gandhi, Kustiniyati Mochtar, Mochtar Lubis\",\n    \"country\": \"Indonesia\",\n    \"language\": \"Indonesia\",\n    \"subject\": \"Self Improvement\",\n    \"publisher\": \"Yayasan Obor Indonesia\",\n    \"published\": \"2016-12-09\",\n    \"media\": \"Hard Copy\",\n    \"pages\": 239,\n    \"isbn\": \"978-979-461-017-6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Access-Control-Request-Method",
+						"value": "POST",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Resiliensi : Bagaimana Bangkit dari Kesulitan & Tumbuh dalam Tantangan\",\n    \"author\": \"M. Taufiq Amir\",\n    \"country\": \"Indonesia\",\n    \"language\": \"Indonesia\",\n    \"subject\": \"Self Improvement\",\n    \"publisher\": \"Kompas Penerbit Buku\",\n    \"published\": \"2021-12-09\",\n    \"media\": \"PDF\",\n    \"pages\": 240,\n    \"isbn\": \"978-623-346-222-8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List book",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/books?title=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail book",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/books/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/books/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
