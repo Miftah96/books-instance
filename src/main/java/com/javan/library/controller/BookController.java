@@ -95,12 +95,12 @@ public class BookController {
     }
 
     @DeleteMapping("books/{id}")
-    public ResponseEntity<HttpStatus> deleteBook(@PathVariable("id") long id) {
+    public ResponseEntity<Object> deleteBook(@PathVariable("id") long id) {
         try {
             bookRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return ResponseHandler.generateResponse(HttpStatus.NO_CONTENT, "Data deleted successfully !", null);
         } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return ResponseHandler.generateResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage(), null);
         }
     }
 
